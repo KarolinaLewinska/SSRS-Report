@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.8.34316.72</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2023-11-27T08:53:03.8562658Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2023-11-27T12:04:20.9540276Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -82,21 +82,21 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.08214in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.08214in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.08214in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.08214in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.275in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -245,7 +245,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.275in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -388,17 +388,21 @@
                 <TablixMember />
                 <TablixMember>
                   <Visibility>
-                    <Hidden>=iif(Parameters!hasbonus.Value ="yes", false, true)</Hidden>
+                    <Hidden>=iif(Parameters!hasbonus.Value ="Yes" OR Parameters!hasbonus.Value ="All", false, true)</Hidden>
                   </Visibility>
                 </TablixMember>
-                <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=iif(Parameters!isstillworking.Value ="No" OR Parameters!isstillworking.Value ="All", false, true)</Hidden>
+                  </Visibility>
+                </TablixMember>
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1in</Size>
+                    <Size>1.08214in</Size>
                     <CellContents>
                       <Textbox Name="Textbox9">
                         <CanGrow>true</CanGrow>
@@ -438,7 +442,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>1in</Size>
+                        <Size>1.08214in</Size>
                         <CellContents>
                           <Textbox Name="Textbox11">
                             <CanGrow>true</CanGrow>
@@ -478,7 +482,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>1in</Size>
+                            <Size>1.08214in</Size>
                             <CellContents>
                               <Textbox Name="Textbox13">
                                 <CanGrow>true</CanGrow>
@@ -536,7 +540,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>1in</Size>
+                    <Size>1.08214in</Size>
                     <CellContents>
                       <Textbox Name="Department1">
                         <CanGrow>true</CanGrow>
@@ -583,7 +587,7 @@
                         </SortExpression>
                       </SortExpressions>
                       <TablixHeader>
-                        <Size>1in</Size>
+                        <Size>1.08214in</Size>
                         <CellContents>
                           <Textbox Name="Business_Unit1">
                             <CanGrow>true</CanGrow>
@@ -630,7 +634,7 @@
                             </SortExpression>
                           </SortExpressions>
                           <TablixHeader>
-                            <Size>1in</Size>
+                            <Size>1.08214in</Size>
                             <CellContents>
                               <Textbox Name="Job_Title1">
                                 <CanGrow>true</CanGrow>
@@ -679,23 +683,51 @@
             <DataSetName>Employees</DataSetName>
             <Filters>
               <Filter>
-                <FilterExpression>=Fields!Country.Value</FilterExpression>
-                <Operator>Like</Operator>
+                <FilterExpression>=Switch(
+Parameters!country.Value = "All", "Include",
+Parameters!country.Value = "United States" AND Fields!Country.Value = "United States" , "Include",
+Parameters!country.Value = "China" AND Fields!Country.Value = "China", "Include",
+Parameters!country.Value = "Brazil" AND Fields!Country.Value = "Brazil",  "Include",
+true, "Exclude"
+)</FilterExpression>
+                <Operator>Equal</Operator>
                 <FilterValues>
-                  <FilterValue>=Parameters!country.Value</FilterValue>
+                  <FilterValue>="Include"</FilterValue>
                 </FilterValues>
               </Filter>
               <Filter>
-                <FilterExpression>=Fields!Gender.Value</FilterExpression>
-                <Operator>Like</Operator>
-                <FilterValues>
-                  <FilterValue>=Parameters!gender.Value</FilterValue>
-                </FilterValues>
-              </Filter>
-              <Filter>
-                <FilterExpression>=switch(Parameters!hasbonus.Value="yes" AND Fields!Bonus__.Value &gt; 0, "Include",
-Parameters!hasbonus.Value="no" AND Fields!Bonus__.Value = 0, "Include",
+                <FilterExpression>=switch(Parameters!hasbonus.Value = "All", "Include",
+Parameters!hasbonus.Value="Yes" AND Fields!Bonus__.Value &gt; 0, "Include",
+Parameters!hasbonus.Value="No" AND Fields!Bonus__.Value = 0, "Include",
 true, "Exclude")</FilterExpression>
+                <Operator>Equal</Operator>
+                <FilterValues>
+                  <FilterValue>="Include"</FilterValue>
+                </FilterValues>
+              </Filter>
+              <Filter>
+                <FilterExpression>=switch(Parameters!isstillworking.Value = "All", "Include",
+Parameters!isstillworking.Value="Yes" AND Len(Fields!Exit_Date.Value) &lt;= 0, "Include",
+Parameters!isstillworking.Value="No" AND Len(Fields!Exit_Date.Value) &gt; 0, "Include",
+true, "Exclude")</FilterExpression>
+                <Operator>Equal</Operator>
+                <FilterValues>
+                  <FilterValue>="Include"</FilterValue>
+                </FilterValues>
+              </Filter>
+              <Filter>
+                <FilterExpression>=Switch(
+Parameters!department.Value = "All", "Include",
+Parameters!department.Value = "Marketing" AND Fields!Department.Value = "Marketing" , "Include",
+Parameters!department.Value = "Sales" AND Fields!Department.Value = "Sales", "Include",
+Parameters!department.Value = "Engineering" AND Fields!Department.Value = "Engineering",  "Include",
+Parameters!department.Value = "IT" AND Fields!Department.Value = "IT",  "Include",
+Parameters!department.Value = "Human Resources" AND Fields!Department.Value = "Human Resources",  "Include",
+Parameters!department.Value = "Finance" AND Fields!Department.Value = "Finance",  "Include",
+Parameters!department.Value = "Accounting" AND Fields!Department.Value = "Accounting",  "Include",
+
+true, "Exclude"
+)</FilterExpression>
                 <Operator>Equal</Operator>
                 <FilterValues>
                   <FilterValue>="Include"</FilterValue>
@@ -703,9 +735,9 @@ true, "Exclude")</FilterExpression>
               </Filter>
             </Filters>
             <Top>0.32167in</Top>
-            <Left>0.655in</Left>
-            <Height>0.5in</Height>
-            <Width>7in</Width>
+            <Left>0.99667in</Left>
+            <Height>0.55in</Height>
+            <Width>7.575in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -863,16 +895,65 @@ true, "Exclude")</FilterExpression>
     </ReportSection>
   </ReportSections>
   <ReportParameters>
+    <ReportParameter Name="department">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>All</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Department</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>All</Value>
+            <Label>All</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Marketing</Value>
+            <Label>Marketing</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Sales</Value>
+            <Label>Sales</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Engineering</Value>
+            <Label>Engineering</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IT</Value>
+            <Label>IT</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Human Resources</Value>
+            <Label>Human Resources</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Finance</Value>
+            <Label>Finance</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Accounting</Value>
+            <Label>Accounting</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
     <ReportParameter Name="country">
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>United States</Value>
+          <Value>All</Value>
         </Values>
       </DefaultValue>
       <Prompt>Country</Prompt>
       <ValidValues>
         <ParameterValues>
+          <ParameterValue>
+            <Value>All</Value>
+            <Label>All</Label>
+          </ParameterValue>
           <ParameterValue>
             <Value>Brazil</Value>
             <Label>Brazil</Label>
@@ -888,44 +969,27 @@ true, "Exclude")</FilterExpression>
         </ParameterValues>
       </ValidValues>
     </ReportParameter>
-    <ReportParameter Name="gender">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>Male</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Gender</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>Male</Value>
-            <Label>Male</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Female</Value>
-            <Label>Female</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
     <ReportParameter Name="hasbonus">
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>yes</Value>
+          <Value>All</Value>
         </Values>
       </DefaultValue>
-      <Prompt>HasBonus</Prompt>
+      <Prompt>Bonus</Prompt>
       <ValidValues>
         <ParameterValues>
           <ParameterValue>
-            <Value>yes</Value>
-            <Label>yes</Label>
+            <Value>All</Value>
+            <Label>All</Label>
           </ParameterValue>
           <ParameterValue>
-            <Value>no</Value>
-            <Label>no</Label>
+            <Value>Yes</Value>
+            <Label>Yes</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>No</Value>
+            <Label>No</Label>
           </ParameterValue>
         </ParameterValues>
       </ValidValues>
@@ -934,19 +998,23 @@ true, "Exclude")</FilterExpression>
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>yes</Value>
+          <Value>All</Value>
         </Values>
       </DefaultValue>
-      <Prompt>isStillWorking</Prompt>
+      <Prompt>Is still working</Prompt>
       <ValidValues>
         <ParameterValues>
           <ParameterValue>
-            <Value>yes</Value>
-            <Label>yes</Label>
+            <Value>All</Value>
+            <Label>All</Label>
           </ParameterValue>
           <ParameterValue>
-            <Value>no</Value>
-            <Label>no</Label>
+            <Value>Yes</Value>
+            <Label>Yes</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>No</Value>
+            <Label>No</Label>
           </ParameterValue>
         </ParameterValues>
       </ValidValues>
@@ -954,27 +1022,27 @@ true, "Exclude")</FilterExpression>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfColumns>3</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>country</ParameterName>
+          <ParameterName>department</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>gender</ParameterName>
+          <ParameterName>country</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
-          <RowIndex>0</RowIndex>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>1</RowIndex>
           <ParameterName>hasbonus</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>3</ColumnIndex>
-          <RowIndex>0</RowIndex>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>1</RowIndex>
           <ParameterName>isstillworking</ParameterName>
         </CellDefinition>
       </CellDefinitions>
