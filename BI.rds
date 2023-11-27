@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="BI">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=.;Initial Catalog=BI;Encrypt=False;TrustServerCertificate=True</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>dd7a0a1f-c3c2-4240-aa4d-5ddc74609352</DataSourceID>
+</RptDataSource>

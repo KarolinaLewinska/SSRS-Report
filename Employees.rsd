@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>BI</DataSourceReference>
+      <CommandText>SELECT [Full Name], [Job Title], Department, [Business Unit], Gender, Age, [Hire Date], [Annual Salary], [Bonus %], Country, City, [Exit Date], Ethnicity
+FROM     Data$</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="Full_Name">
+        <DataField>Full Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Job_Title">
+        <DataField>Job Title</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Department">
+        <DataField>Department</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Business_Unit">
+        <DataField>Business Unit</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Gender">
+        <DataField>Gender</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Age">
+        <DataField>Age</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Hire_Date">
+        <DataField>Hire Date</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="Annual_Salary">
+        <DataField>Annual Salary</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="Bonus__">
+        <DataField>Bonus %</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Country">
+        <DataField>Country</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="City">
+        <DataField>City</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Exit_Date">
+        <DataField>Exit Date</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Ethnicity">
+        <DataField>Ethnicity</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
