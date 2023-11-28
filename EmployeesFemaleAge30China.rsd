@@ -4,7 +4,8 @@
     <Query>
       <DataSourceReference>BI</DataSourceReference>
       <CommandText>SELECT [Full Name], [Job Title], Department, [Business Unit], Gender, Age, [Hire Date], [Annual Salary], [Bonus %], Country, City, [Exit Date], Ethnicity
-FROM     Data$</CommandText>
+FROM     Data$
+WHERE  (Age = 30) AND (Gender = 'Female') AND (Country = 'China')</CommandText>
     </Query>
     <Fields>
       <Field Name="Full_Name">

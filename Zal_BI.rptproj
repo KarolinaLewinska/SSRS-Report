@@ -50,6 +50,7 @@
   </PropertyGroup>
   <ItemGroup>
     <DataSet Include="Employees.rsd" />
+    <DataSet Include="EmployeesFemaleAge30China.rsd" />
     <DataSet Include="Financials.rsd" />
   </ItemGroup>
   <ItemGroup>
