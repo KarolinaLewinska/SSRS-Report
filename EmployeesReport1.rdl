@@ -2029,8 +2029,8 @@ true, "Exclude"
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>EmployeesFemaleAge30China</DataSetName>
-            <Top>0.31333in</Top>
-            <Left>7.655in</Left>
+            <Top>0.85195in</Top>
+            <Left>7.64111in</Left>
             <Height>0.85796in</Height>
             <Width>3.68333in</Width>
             <ZIndex>3</ZIndex>
@@ -2040,6 +2040,36 @@ true, "Exclude"
               </Border>
             </Style>
           </Tablix>
+          <Textbox Name="Textbox20">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Annual salary of female employees, age 30 from China</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox20</rd:DefaultName>
+            <Top>0.31333in</Top>
+            <Left>7.96341in</Left>
+            <Height>0.38211in</Height>
+            <Width>3.20215in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <Height>5.43in</Height>
         <Style />
