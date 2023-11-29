@@ -793,8 +793,8 @@ true, "Exclude"
                 </FilterValues>
               </Filter>
             </Filters>
-            <Top>3.48834in</Top>
-            <Left>0.72701in</Left>
+            <Top>4.74867in</Top>
+            <Left>0.655in</Left>
             <Height>0.55in</Height>
             <Width>10.57154in</Width>
             <Style>
@@ -838,12 +838,18 @@ true, "Exclude"
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style>
+                          <FontWeight>Bold</FontWeight>
                           <Format>0.00%</Format>
                         </Style>
                         <UseValueAsLabel>true</UseValueAsLabel>
                         <Visible>true</Visible>
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=iif(Fields!Gender.Value="Female","LightBlue","LightGreen")</Color>
+                        <BackgroundGradientType>None</BackgroundGradientType>
+                        <BackgroundGradientEndColor>White</BackgroundGradientEndColor>
+                        <BackgroundHatchType>BackwardDiagonal</BackgroundHatchType>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -1124,7 +1130,7 @@ true, "Exclude"
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Average bonus by gender</Caption>
+                <Caption>Average bonus value by gender</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -1155,8 +1161,8 @@ true, "Exclude"
             </ChartNoDataMessage>
             <DataSetName>Employees</DataSetName>
             <Top>0.31333in</Top>
-            <Left>1.20269in</Left>
-            <Height>2.56667in</Height>
+            <Left>0.66889in</Left>
+            <Height>2.58044in</Height>
             <Width>2.86341in</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -1202,9 +1208,16 @@ true, "Exclude"
                         <Y>=Avg(Fields!Bonus__.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
-                        <Style />
+                        <Style>
+                          <FontSize>9pt</FontSize>
+                          <Format>0.00%</Format>
+                        </Style>
+                        <UseValueAsLabel>true</UseValueAsLabel>
+                        <Visible>true</Visible>
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <BackgroundGradientType>TopBottom</BackgroundGradientType>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -1463,25 +1476,6 @@ true, "Exclude"
                 </Style>
               </ChartArea>
             </ChartAreas>
-            <ChartLegends>
-              <ChartLegend Name="Default">
-                <Style>
-                  <BackgroundGradientType>None</BackgroundGradientType>
-                  <FontSize>8pt</FontSize>
-                </Style>
-                <Position>TopLeft</Position>
-                <ChartLegendTitle>
-                  <Caption />
-                  <Style>
-                    <FontSize>8pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </ChartLegendTitle>
-                <HeaderSeparatorColor>Black</HeaderSeparatorColor>
-                <ColumnSeparatorColor>Black</ColumnSeparatorColor>
-              </ChartLegend>
-            </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
                 <Caption>Average bonus by department</Caption>
@@ -1515,9 +1509,9 @@ true, "Exclude"
             </ChartNoDataMessage>
             <DataSetName>Employees</DataSetName>
             <Top>0.31333in</Top>
-            <Left>4.09389in</Left>
-            <Height>2.56667in</Height>
-            <Width>3.49167in</Width>
+            <Left>3.57397in</Left>
+            <Height>3.62209in</Height>
+            <Width>4.30835in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -1692,7 +1686,7 @@ true, "Exclude"
                                           <Color>Silver</Color>
                                           <Style>Solid</Style>
                                         </Border>
-                                        <BackgroundColor>Red</BackgroundColor>
+                                        <BackgroundColor>#ff4a19</BackgroundColor>
                                         <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
                                         <BackgroundGradientEndColor>Salmon</BackgroundGradientEndColor>
                                         <FontFamily>Arial</FontFamily>
@@ -1719,7 +1713,7 @@ true, "Exclude"
                                           <Color>Silver</Color>
                                           <Style>Solid</Style>
                                         </Border>
-                                        <BackgroundColor>Orange</BackgroundColor>
+                                        <BackgroundColor>#ffb200</BackgroundColor>
                                         <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
                                         <BackgroundGradientEndColor>Salmon</BackgroundGradientEndColor>
                                         <FontFamily>Arial</FontFamily>
@@ -1746,7 +1740,7 @@ true, "Exclude"
                                           <Color>Silver</Color>
                                           <Style>Solid</Style>
                                         </Border>
-                                        <BackgroundColor>LimeGreen</BackgroundColor>
+                                        <BackgroundColor>LightGreen</BackgroundColor>
                                         <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
                                         <BackgroundGradientEndColor>Salmon</BackgroundGradientEndColor>
                                         <FontFamily>Arial</FontFamily>
@@ -2122,7 +2116,7 @@ true, "Exclude"
             </TablixRowHierarchy>
             <DataSetName>EmployeesFemaleAge30China</DataSetName>
             <Top>0.85195in</Top>
-            <Left>7.64111in</Left>
+            <Left>7.86842in</Left>
             <Height>0.85796in</Height>
             <Width>3.68333in</Width>
             <ZIndex>3</ZIndex>
@@ -2153,8 +2147,8 @@ true, "Exclude"
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox20</rd:DefaultName>
-            <Top>0.44206in</Top>
-            <Left>7.655in</Left>
+            <Top>0.31333in</Top>
+            <Left>7.88231in</Left>
             <Height>0.38211in</Height>
             <Width>3.66944in</Width>
             <ZIndex>4</ZIndex>
