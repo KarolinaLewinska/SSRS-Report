@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.8.34316.72</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2023-11-28T09:31:46.7521779Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2023-11-29T10:11:05.9202040Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -794,7 +794,7 @@ true, "Exclude"
               </Filter>
             </Filters>
             <Top>3.48834in</Top>
-            <Left>0.76679in</Left>
+            <Left>0.72701in</Left>
             <Height>0.55in</Height>
             <Width>10.57154in</Width>
             <Style>
@@ -1702,11 +1702,11 @@ true, "Exclude"
                                       <BackgroundGradientType>None</BackgroundGradientType>
                                       <DistanceFromScale>0</DistanceFromScale>
                                       <StartValue>
-                                        <Value>80000</Value>
+                                        <Value>180000</Value>
                                         <Multiplier>1</Multiplier>
                                       </StartValue>
                                       <EndValue>
-                                        <Value>100000</Value>
+                                        <Value>258498</Value>
                                         <Multiplier>1</Multiplier>
                                       </EndValue>
                                       <StartWidth>30</StartWidth>
@@ -1729,11 +1729,11 @@ true, "Exclude"
                                       <BackgroundGradientType>None</BackgroundGradientType>
                                       <DistanceFromScale>0</DistanceFromScale>
                                       <StartValue>
-                                        <Value>50000</Value>
+                                        <Value>70000</Value>
                                         <Multiplier>1</Multiplier>
                                       </StartValue>
                                       <EndValue>
-                                        <Value>80000</Value>
+                                        <Value>180000</Value>
                                         <Multiplier>1</Multiplier>
                                       </EndValue>
                                       <StartWidth>30</StartWidth>
@@ -1760,7 +1760,7 @@ true, "Exclude"
                                         <Multiplier>1</Multiplier>
                                       </StartValue>
                                       <EndValue>
-                                        <Value>50000</Value>
+                                        <Value>70000</Value>
                                         <Multiplier>1</Multiplier>
                                       </EndValue>
                                       <StartWidth>30</StartWidth>
@@ -1778,10 +1778,10 @@ true, "Exclude"
                                     <BackgroundHatchType>None</BackgroundHatchType>
                                     <ShadowOffset>0pt</ShadowOffset>
                                   </Style>
-                                  <Interval>NaN</Interval>
+                                  <Interval>100000</Interval>
                                   <IntervalOffset>NaN</IntervalOffset>
                                   <MaximumValue>
-                                    <Value>100000</Value>
+                                    <Value>258498</Value>
                                     <Multiplier>1</Multiplier>
                                   </MaximumValue>
                                   <MinimumValue>
@@ -1806,6 +1806,7 @@ true, "Exclude"
                                     </TickMarkImage>
                                     <Length>5</Length>
                                     <Width>0.5</Width>
+                                    <Hidden>true</Hidden>
                                   </GaugeMajorTickMarks>
                                   <GaugeMinorTickMarks>
                                     <Interval>NaN</Interval>
@@ -1883,6 +1884,7 @@ true, "Exclude"
                                     <Placement>Outside</Placement>
                                     <RotateLabels>true</RotateLabels>
                                     <ShowEndLabels>true</ShowEndLabels>
+                                    <Hidden>true</Hidden>
                                     <UseFontPercent>true</UseFontPercent>
                                   </ScaleLabels>
                                   <Width>0</Width>
@@ -1966,6 +1968,96 @@ true, "Exclude"
                               </Style>
                               <Top>10</Top>
                               <Left>70</Left>
+                              <Height>15</Height>
+                              <Width>30</Width>
+                              <ParentItem>LinearGauges.LinearGauge1</ParentItem>
+                            </GaugeLabel>
+                            <GaugeLabel Name="GaugeLabel3">
+                              <Text>70000</Text>
+                              <ResizeMode>None</ResizeMode>
+                              <TextShadowOffset>0pt</TextShadowOffset>
+                              <UseFontPercent>true</UseFontPercent>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>#00ffffff</BackgroundColor>
+                                <BackgroundGradientType>None</BackgroundGradientType>
+                                <BackgroundGradientEndColor>#00ffffff</BackgroundGradientEndColor>
+                                <FontSize>11pt</FontSize>
+                                <Color>Silver</Color>
+                                <ShadowOffset>0pt</ShadowOffset>
+                              </Style>
+                              <Top>66.3366317749023</Top>
+                              <Left>25</Left>
+                              <Height>9</Height>
+                              <Width>21</Width>
+                            </GaugeLabel>
+                            <GaugeLabel Name="GaugeLabel4">
+                              <Text>180000</Text>
+                              <ResizeMode>None</ResizeMode>
+                              <TextShadowOffset>0pt</TextShadowOffset>
+                              <UseFontPercent>true</UseFontPercent>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>#00ffffff</BackgroundColor>
+                                <BackgroundGradientType>None</BackgroundGradientType>
+                                <BackgroundGradientEndColor>#00ffffff</BackgroundGradientEndColor>
+                                <FontSize>11pt</FontSize>
+                                <TextAlign>Right</TextAlign>
+                                <Color>Silver</Color>
+                                <ShadowOffset>0pt</ShadowOffset>
+                              </Style>
+                              <Top>66.3366317749023</Top>
+                              <Left>42.8246002197266</Left>
+                              <Height>15</Height>
+                              <Width>30</Width>
+                              <ParentItem>LinearGauges.LinearGauge1</ParentItem>
+                            </GaugeLabel>
+                            <GaugeLabel Name="GaugeLabel5">
+                              <Text>0</Text>
+                              <ResizeMode>None</ResizeMode>
+                              <TextShadowOffset>0pt</TextShadowOffset>
+                              <UseFontPercent>true</UseFontPercent>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>#00ffffff</BackgroundColor>
+                                <BackgroundGradientType>None</BackgroundGradientType>
+                                <BackgroundGradientEndColor>#00ffffff</BackgroundGradientEndColor>
+                                <FontSize>11pt</FontSize>
+                                <TextAlign>Right</TextAlign>
+                                <Color>Silver</Color>
+                                <ShadowOffset>0pt</ShadowOffset>
+                              </Style>
+                              <Top>66.3366317749023</Top>
+                              <Left>-20.2733497619629</Left>
+                              <Height>15</Height>
+                              <Width>30</Width>
+                              <ParentItem>LinearGauges.LinearGauge1</ParentItem>
+                            </GaugeLabel>
+                            <GaugeLabel Name="GaugeLabel6">
+                              <Text>258498</Text>
+                              <ResizeMode>None</ResizeMode>
+                              <TextShadowOffset>0pt</TextShadowOffset>
+                              <UseFontPercent>true</UseFontPercent>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>#00ffffff</BackgroundColor>
+                                <BackgroundGradientType>None</BackgroundGradientType>
+                                <BackgroundGradientEndColor>#00ffffff</BackgroundGradientEndColor>
+                                <FontSize>11pt</FontSize>
+                                <TextAlign>Right</TextAlign>
+                                <Color>Silver</Color>
+                                <ShadowOffset>0pt</ShadowOffset>
+                              </Style>
+                              <Top>66.3366317749023</Top>
+                              <Left>67.6537551879883</Left>
                               <Height>15</Height>
                               <Width>30</Width>
                               <ParentItem>LinearGauges.LinearGauge1</ParentItem>
