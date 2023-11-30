@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.8.34316.72</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2023-11-29T11:59:05.7605495Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2023-11-30T07:29:59.0464625Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -796,7 +796,7 @@ true, "Exclude"
             <Top>4.74867in</Top>
             <Left>0.655in</Left>
             <Height>0.55in</Height>
-            <Width>10.78333in</Width>
+            <Width>10.78336in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1161,6 +1161,7 @@ true, "Exclude"
             </ChartNoDataMessage>
             <DataSetName>Employees</DataSetName>
             <Top>0.31333in</Top>
+            <Left>0.39239in</Left>
             <Height>2.58044in</Height>
             <Width>2.56087in</Width>
             <ZIndex>1</ZIndex>
@@ -1524,7 +1525,7 @@ Fields!Department.Value="Accounting", "#4c7c9b"
             </ChartNoDataMessage>
             <DataSetName>Employees</DataSetName>
             <Top>0.31333in</Top>
-            <Left>2.57476in</Left>
+            <Left>2.72598in</Left>
             <Height>3.62209in</Height>
             <Width>6.04921in</Width>
             <ZIndex>2</ZIndex>
@@ -2131,7 +2132,7 @@ Fields!Department.Value="Accounting", "#4c7c9b"
             </TablixRowHierarchy>
             <DataSetName>EmployeesFemaleAge30China</DataSetName>
             <Top>1.01028in</Top>
-            <Left>8.67953in</Left>
+            <Left>8.78908in</Left>
             <Height>0.89129in</Height>
             <Width>2.87222in</Width>
             <ZIndex>3</ZIndex>
@@ -2148,7 +2149,7 @@ Fields!Department.Value="Accounting", "#4c7c9b"
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Annual salary of employees (female, age 30, China)</Value>
+                    <Value>Annual salary of employees </Value>
                     <Style>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Light</FontWeight>
@@ -2157,13 +2158,28 @@ Fields!Department.Value="Accounting", "#4c7c9b"
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Left</TextAlign>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>(female, age 30, China)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Light</FontWeight>
+                      <Color>#a6a6a6</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox20</rd:DefaultName>
             <Top>0.31333in</Top>
-            <Left>8.69342in</Left>
+            <Left>8.80297in</Left>
             <Height>0.44878in</Height>
             <Width>2.84444in</Width>
             <ZIndex>4</ZIndex>
@@ -2226,9 +2242,9 @@ Fields!Department.Value="Accounting", "#4c7c9b"
               </Paragraphs>
               <rd:DefaultName>Textbox15</rd:DefaultName>
               <Top>0.29667in</Top>
-              <Left>2.48786in</Left>
+              <Left>2.38908in</Left>
               <Height>0.70333in</Height>
-              <Width>7.07222in</Width>
+              <Width>7.171in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2250,19 +2266,24 @@ Fields!Department.Value="Accounting", "#4c7c9b"
                       <Style />
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>0.29667in</Top>
-              <Left>9.67491in</Left>
-              <Height>0.18333in</Height>
+              <Top>0.36611in</Top>
+              <Left>9.89788in</Left>
+              <Height>0.25555in</Height>
               <Width>1.76342in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
-                  <Style>None</Style>
+                  <Color>#7dbdd5</Color>
+                  <Style>Solid</Style>
                 </Border>
+                <BackgroundColor>LightBlue</BackgroundColor>
+                <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2280,19 +2301,24 @@ Fields!Department.Value="Accounting", "#4c7c9b"
                       <Style />
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox5</rd:DefaultName>
-              <Top>0.55222in</Top>
-              <Left>9.67491in</Left>
+              <Top>0.66333in</Top>
+              <Left>9.89788in</Left>
               <Height>0.25in</Height>
-              <Width>1.74953in</Width>
+              <Width>1.76342in</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
-                  <Style>None</Style>
+                  <Color>#7dbdd5</Color>
+                  <Style>Solid</Style>
                 </Border>
+                <BackgroundColor>LightBlue</BackgroundColor>
+                <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2310,19 +2336,24 @@ Fields!Department.Value="Accounting", "#4c7c9b"
                       <Style />
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>0.51056in</Top>
-              <Left>0.655in</Left>
+              <Top>0.36611in</Top>
+              <Left>0.61177in</Left>
               <Height>0.29167in</Height>
               <Width>1.76342in</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
-                  <Style>None</Style>
+                  <Color>#7dbdd5</Color>
+                  <Style>Solid</Style>
                 </Border>
+                <BackgroundColor>LightBlue</BackgroundColor>
+                <VerticalAlign>Middle</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
