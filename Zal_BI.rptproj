@@ -50,8 +50,12 @@
   </PropertyGroup>
   <ItemGroup>
     <DataSet Include="Employees.rsd" />
+    <DataSet Include="EmployeesCity.rsd" />
     <DataSet Include="EmployeesFemaleAge30China.rsd" />
     <DataSet Include="EmployeesMaleAge30China.rsd" />
+    <DataSet Include="FinancialResultAccounts.rsd" />
+    <DataSet Include="FinancialResultBussinessUnits.rsd" />
+    <DataSet Include="FinancialResultTotal.rsd" />
     <DataSet Include="Financials.rsd" />
   </ItemGroup>
   <ItemGroup>
@@ -59,7 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Report Include="EmployeesReport1.rdl" />
+    <Report Include="EmployeesReport2.rdl" />
     <Report Include="NavigationPannel.rdl" />
+    <Report Include="ReportAO.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>

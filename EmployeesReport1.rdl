@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.8.34316.72</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2023-12-07T10:25:16.8490748Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2023-12-11T15:34:57.0167929Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -1525,9 +1525,9 @@ Fields!Department.Value="Accounting", "#4c7c9b"
             </ChartNoDataMessage>
             <DataSetName>Employees</DataSetName>
             <Top>0.31333in</Top>
-            <Left>5.95428in</Left>
+            <Left>5.61935in</Left>
             <Height>3.62209in</Height>
-            <Width>5.70702in</Width>
+            <Width>6.04195in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -1616,6 +1616,15 @@ Fields!Department.Value="Accounting", "#4c7c9b"
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
+              <ActionInfo>
+                <Actions>
+                  <Action>
+                    <Drillthrough>
+                      <ReportName>EmployeesReport2</ReportName>
+                    </Drillthrough>
+                  </Action>
+                </Actions>
+              </ActionInfo>
               <Top>0.36611in</Top>
               <Left>9.89788in</Left>
               <Height>0.25555in</Height>
@@ -1651,6 +1660,15 @@ Fields!Department.Value="Accounting", "#4c7c9b"
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox5</rd:DefaultName>
+              <ActionInfo>
+                <Actions>
+                  <Action>
+                    <Drillthrough>
+                      <ReportName>ReportAO</ReportName>
+                    </Drillthrough>
+                  </Action>
+                </Actions>
+              </ActionInfo>
               <Top>0.66333in</Top>
               <Left>9.89788in</Left>
               <Height>0.25in</Height>
@@ -1686,6 +1704,15 @@ Fields!Department.Value="Accounting", "#4c7c9b"
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
+              <ActionInfo>
+                <Actions>
+                  <Action>
+                    <Drillthrough>
+                      <ReportName>NavigationPannel</ReportName>
+                    </Drillthrough>
+                  </Action>
+                </Actions>
+              </ActionInfo>
               <Top>0.36611in</Top>
               <Left>0.61177in</Left>
               <Height>0.29167in</Height>
@@ -1800,7 +1827,7 @@ Fields!Department.Value="Accounting", "#4c7c9b"
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>All</Value>
+          <Value>IT</Value>
         </Values>
       </DefaultValue>
       <Prompt>Department</Prompt>
@@ -1845,7 +1872,7 @@ Fields!Department.Value="Accounting", "#4c7c9b"
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>All</Value>
+          <Value>United States</Value>
         </Values>
       </DefaultValue>
       <Prompt>Country</Prompt>
@@ -1874,7 +1901,7 @@ Fields!Department.Value="Accounting", "#4c7c9b"
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>All</Value>
+          <Value>Yes</Value>
         </Values>
       </DefaultValue>
       <Prompt>Bonus</Prompt>

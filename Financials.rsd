@@ -3,14 +3,13 @@
   <DataSet Name="DataSet1">
     <Query>
       <DataSourceReference>BI</DataSourceReference>
-      <CommandText>SELECT Account, [Businees Unit], Year, Scenario, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
-FROM     Financials$</CommandText>
+      <CommandText>SELECT [Businees Unit], Year, Scenario, SUM(Jan) AS 'January', SUM(Feb) AS 'February', SUM(Mar) AS 'March', SUM(Apr) AS 'April', SUM(May) AS 'May', SUM(Jun) AS 'June', SUM(Jul) AS 'July', SUM(Aug) AS 'August', SUM(Sep) AS 'September', 
+                  SUM(Oct) AS 'October', SUM(Nov) AS 'November', SUM(Dec) AS 'December'
+FROM     Financials$
+GROUP BY [Businees Unit], Year, Scenario
+ORDER BY [Businees Unit], Year, Scenario</CommandText>
     </Query>
     <Fields>
-      <Field Name="Account">
-        <DataField>Account</DataField>
-        <rd:TypeName>System.String</rd:TypeName>
-      </Field>
       <Field Name="Businees_Unit">
         <DataField>Businees Unit</DataField>
         <rd:TypeName>System.String</rd:TypeName>
@@ -23,52 +22,52 @@ FROM     Financials$</CommandText>
         <DataField>Scenario</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
-      <Field Name="Jan">
-        <DataField>Jan</DataField>
+      <Field Name="January">
+        <DataField>January</DataField>
         <rd:TypeName>System.Decimal</rd:TypeName>
       </Field>
-      <Field Name="Feb">
-        <DataField>Feb</DataField>
+      <Field Name="February">
+        <DataField>February</DataField>
         <rd:TypeName>System.Decimal</rd:TypeName>
       </Field>
-      <Field Name="Mar">
-        <DataField>Mar</DataField>
+      <Field Name="March">
+        <DataField>March</DataField>
         <rd:TypeName>System.Decimal</rd:TypeName>
       </Field>
-      <Field Name="Apr">
-        <DataField>Apr</DataField>
+      <Field Name="April">
+        <DataField>April</DataField>
         <rd:TypeName>System.Decimal</rd:TypeName>
       </Field>
       <Field Name="May">
         <DataField>May</DataField>
         <rd:TypeName>System.Decimal</rd:TypeName>
       </Field>
-      <Field Name="Jun">
-        <DataField>Jun</DataField>
+      <Field Name="June">
+        <DataField>June</DataField>
         <rd:TypeName>System.Decimal</rd:TypeName>
       </Field>
-      <Field Name="Jul">
-        <DataField>Jul</DataField>
+      <Field Name="July">
+        <DataField>July</DataField>
         <rd:TypeName>System.Decimal</rd:TypeName>
       </Field>
-      <Field Name="Aug">
-        <DataField>Aug</DataField>
+      <Field Name="August">
+        <DataField>August</DataField>
         <rd:TypeName>System.Decimal</rd:TypeName>
       </Field>
-      <Field Name="Sep">
-        <DataField>Sep</DataField>
+      <Field Name="September">
+        <DataField>September</DataField>
         <rd:TypeName>System.Decimal</rd:TypeName>
       </Field>
-      <Field Name="Oct">
-        <DataField>Oct</DataField>
+      <Field Name="October">
+        <DataField>October</DataField>
         <rd:TypeName>System.Decimal</rd:TypeName>
       </Field>
-      <Field Name="Nov">
-        <DataField>Nov</DataField>
+      <Field Name="November">
+        <DataField>November</DataField>
         <rd:TypeName>System.Decimal</rd:TypeName>
       </Field>
-      <Field Name="Dec">
-        <DataField>Dec</DataField>
+      <Field Name="December">
+        <DataField>December</DataField>
         <rd:TypeName>System.Decimal</rd:TypeName>
       </Field>
     </Fields>
