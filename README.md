@@ -1,5 +1,5 @@
 # SQL Server Reporting Services
-Reports and dashboard based on fictitious employees and financial data.
+Reports and navigation panel based on fictitious employees and financial data.
 
 ## Employees Report 1
 ![Employees Report 1_1](https://github.com/KarolinaLewinska/SSRS-Report/blob/master/ReportsScreenshots/EmployeesReport1_1.jpg) <br>
@@ -13,3 +13,6 @@ Reports and dashboard based on fictitious employees and financial data.
 
 ## Financial Report
 ![FinancialsReport](https://github.com/KarolinaLewinska/SSRS-Report/blob/master/ReportsScreenshots/FinancialsReport.jpg) <br>
+
+## Navigation Panel
+![Navigation Panel](https://github.com/KarolinaLewinska/SSRS-Report/blob/master/ReportsScreenshots/NavigationPanel.jpg) <br>
